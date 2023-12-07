@@ -27,16 +27,26 @@
     (
       system: let
         inherit (jupyenv.lib.${system}) mkJupyterlabNew;
+        pkgs = import nixpkgs { inherit system; };
         jupyterlab = mkJupyterlabNew ({...}: {
           nixpkgs = inputs.nixpkgs;
           imports = [(import ./kernels.nix)];
         });
-      # TODO: Disabled auto-open
+
+      # TODO:
+      #   - [ ] Disable auto-open
+      #   - [ ] Don't listen on network
+      #   - [x] Configure direnv to escape nix-garbage-collect
+
       in rec {
         packages = {inherit jupyterlab;};
         packages.default = jupyterlab;
         apps.default.program = "${jupyterlab}/bin/jupyter-lab";
         apps.default.type = "app";
+
+        devShells.default = pkgs.mkShell {
+          buildInputs = [ jupyterlab ];
+        };
       }
     );
 }
