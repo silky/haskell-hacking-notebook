@@ -33,11 +33,6 @@
           imports = [(import ./kernels.nix)];
         });
 
-      # TODO:
-      #   - [ ] Disable auto-open
-      #   - [ ] Don't listen on network
-      #   - [x] Configure direnv to escape nix-garbage-collect
-
       in rec {
         packages = {inherit jupyterlab;};
         packages.default = jupyterlab;

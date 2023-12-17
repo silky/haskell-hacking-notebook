@@ -7,6 +7,7 @@
         QuickCheck
         aeson
         aeson-diff
+        barbies
         data-interval
         gdiff
         generic-lens
