@@ -3,6 +3,7 @@
     enable = true;
     haskellCompiler = "ghc943";
     extraHaskellPackages = ps: with ps; [
+        Diff
         QuickCheck
         aeson
         aeson-diff
@@ -12,6 +13,8 @@
         lens
         morpheus-graphql
         morpheus-graphql-client
+        patch
+        tree-diff
         vector
       ];
   };
