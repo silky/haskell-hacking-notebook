@@ -7,6 +7,7 @@
         aeson
         aeson-diff
         data-interval
+        gdiff
         generic-lens
         lens
         morpheus-graphql
