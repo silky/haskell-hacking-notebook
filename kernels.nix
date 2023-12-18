@@ -8,6 +8,7 @@
         aeson
         aeson-diff
         barbies
+        barbies-th
         data-interval
         gdiff
         generic-lens
