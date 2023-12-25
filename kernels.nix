@@ -1,5 +1,6 @@
 {pkgs, ...}: {
-  kernel.haskell.kitchen-sink = {
+  kernel.haskell.kitchen-sink =
+  {
     enable = true;
     haskellCompiler = "ghc943";
     extraHaskellPackages = ps: with ps; [
@@ -8,8 +9,8 @@
         aeson
         aeson-diff
         barbies
-        barbies-th
         barbies-layered
+        barbies-th
         data-interval
         gdiff
         generic-lens
