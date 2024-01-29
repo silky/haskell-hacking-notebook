@@ -18,6 +18,7 @@
         morpheus-graphql
         morpheus-graphql-client
         patch
+        patience
         tree-diff
         vector
       ];
