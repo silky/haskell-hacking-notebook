@@ -40,7 +40,7 @@
         apps.default.type = "app";
 
         devShells.default = pkgs.mkShell {
-          buildInputs = [ jupyterlab ];
+          buildInputs = [ jupyterlab pkgs.coreutils ];
         };
       }
     );
